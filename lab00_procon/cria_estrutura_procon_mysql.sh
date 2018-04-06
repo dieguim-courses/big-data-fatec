@@ -42,7 +42,7 @@ CREATE TABLE proconbase (
 	CodigoProblema VARCHAR(150), 
 	DescricaoProblema VARCHAR(500),
 	SexoConsumidor VARCHAR(150),
-	FaixaEtariaConsumidor VARCHAR(150) ,
+	FaixaEtariaConsumidor VARCHAR(150),
 	CEPConsumidor VARCHAR(120)
 );
 EOF

@@ -66,7 +66,7 @@ TRIM(DescCNAEPrincipal) FROM proconbase ;
 
 DELETE FROM Cnae WHERE cod_cnae IS NULL ;
 
-- verifica duplicatas
+-- verifica duplicatas
 SELECT cod_cnae, COUNT(*) FROM cnae
 GROUP BY cod_cnae
 HAVING COUNT(*) > 1 ;
