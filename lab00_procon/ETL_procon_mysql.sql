@@ -8,8 +8,6 @@ CNAE -> Empresa -> Reclamação  <- Assunto
 							   <- Tempo
 */
 
-/******************************
-
 -- extraindo dados da tabela base para criar tabelas referenciadas com código
 
 -------------------
@@ -27,11 +25,16 @@ INSERT INTO regiao(cod_regiao, regiao)
 		TRIM(regiao)
 	FROM proconbase;
 
+-- definindo a PK
 ALTER TABLE regiao ADD PRIMARY KEY (cod_regiao);
+
+-- total de registros na tabela regiao
+SELECT count(*) AS "REGIAO: TOTAL DE REGISTROS FINAL" FROM regiao;
 
 ---------------
 --- C N A E ---
 ---------------
+DROP TABLE IF EXISTS empresa; -- excluir antes para evitar erro de chave estrangeira
 DROP TABLE IF EXISTS cnae;
 CREATE TABLE cnae (
 	cod_cnae INT,
@@ -60,14 +63,17 @@ DELETE FROM cnae WHERE descr_cnae IS NULL;
 -- definindo a PK
 ALTER TABLE cnae ADD PRIMARY KEY (cod_cnae) ;
 
+-- total de registros na tabela cnae
+SELECT count(*) AS "CNAE: TOTAL DE REGISTROS FINAL" FROM cnae;
+
 ---------------------
 --- E M P R E S A ---
 ---------------------
-SELECT MAX(LENGTH(TRIM(strRazaoSocial))) FROM proconbase ; --100
-SELECT MAX(LENGTH(TRIM(strNomeFantasia))) FROM proconbase ; --69
-SELECT MAX(LENGTH(TRIM(RazaoSocialRFB))) FROM proconbase ; --150
-SELECT MAX(LENGTH(TRIM(NomeFantasiaRFB))) FROM proconbase ; --55
-SELECT MAX(LENGTH(TRIM(NumeroCNPJ))) FROM proconbase ; -- 14
+--SELECT MAX(LENGTH(TRIM(strRazaoSocial))) FROM proconbase ; --100
+--SELECT MAX(LENGTH(TRIM(strNomeFantasia))) FROM proconbase ; --69
+--SELECT MAX(LENGTH(TRIM(RazaoSocialRFB))) FROM proconbase ; --150
+--SELECT MAX(LENGTH(TRIM(NomeFantasiaRFB))) FROM proconbase ; --55
+--SELECT MAX(LENGTH(TRIM(NumeroCNPJ))) FROM proconbase ; -- 14
 
 -- tabela empresa
 DROP TABLE IF EXISTS empresa;
@@ -133,9 +139,6 @@ LEFT JOIN (
 ) manter ON e.t_seq = manter.s
 WHERE manter.s IS NULL;
 
--- Total de registros após a remoção
-SELECT count(*) AS "EMPRESA: TOTAL DE REGISTROS FINAL" FROM empresa;
-
 -- removendo a coluna auxiliar
 ALTER TABLE empresa DROP t_seq;
 
@@ -144,6 +147,9 @@ ALTER TABLE empresa ADD PRIMARY KEY (cnpj);
 
 -- defininido a FK cod_cnae
 ALTER TABLE empresa ADD FOREIGN KEY (cod_cnae) REFERENCES cnae(cod_cnae);
+
+-- Total de registros na tabela empresa
+SELECT count(*) AS "EMPRESA: TOTAL DE REGISTROS FINAL" FROM empresa;
 
 ---------------------
 --- A S S U N T O ---
@@ -174,12 +180,13 @@ LEFT JOIN (
 ) manter ON a.t_seq = manter.s
 WHERE manter.s IS NULL;
 
-SELECT count(*) AS "ASSUNTO: TOTAL DE REGISTROS FINAL" FROM assunto;
-
 ALTER TABLE assunto DROP t_seq;
 
 -- definindo a PK
 ALTER TABLE assunto ADD PRIMARY KEY (cod_assunto);
+
+-- Total de registros na tabela assunto
+SELECT count(*) AS "ASSUNTO: TOTAL DE REGISTROS FINAL" FROM assunto;
 
 -----------------------
 --- P R O B L E M A ---
@@ -210,12 +217,13 @@ LEFT JOIN (
 ) manter ON p.t_seq = manter.s
 WHERE manter.s IS NULL;
 
-SELECT count(*) AS "PROBLEMA: TOTAL DE REGISTROS FINAL" FROM problema;
-
 ALTER TABLE problema DROP t_seq;
 
 -- definindo a PK
 ALTER TABLE problema ADD PRIMARY KEY (cod_problema);
+
+-- Total de registros na tabela problema
+SELECT count(*) AS "PROBLEMA: TOTAL DE REGISTROS FINAL" FROM problema;
 
 -----------
 --- U F ---
@@ -261,17 +269,20 @@ UPDATE uf set nome_uf = 'Tocantins' WHERE uf = 'TO' ;
 
 UPDATE uf set nome_uf = UPPER(nome_uf);
 
+-- Total de registros na tabela uf
+SELECT count(*) AS "UF: TOTAL DE REGISTROS FINAL" FROM uf;
+
 ------------------------------
 --- limpando a tabela base ---
 ------------------------------
-SELECT MAX(LENGTH(TRIM(UF))) FROM proconbase ; -- 2
-SELECT MAX(LENGTH(TRIM(Atendida))) FROM proconbase ; -- 1
-SELECT MAX(LENGTH(TRIM(SexoConsumidor))) FROM proconbase ; -- 1
-SELECT DISTINCT TRIM(SexoConsumidor) FROM proconbase ; -- tem NULL
-SELECT MAX(LENGTH(TRIM(CEPconsumidor))) FROM proconbase ; -- 14 - tem 'Nao se aplica'
+--SELECT MAX(LENGTH(TRIM(UF))) FROM proconbase; -- 2
+--SELECT MAX(LENGTH(TRIM(Atendida))) FROM proconbase; -- 1
+--SELECT MAX(LENGTH(TRIM(SexoConsumidor))) FROM proconbase; -- 1
+--SELECT DISTINCT TRIM(SexoConsumidor) FROM proconbase; -- tem NULL
+--SELECT MAX(LENGTH(TRIM(CEPconsumidor))) FROM proconbase; -- 14 - tem 'Nao se aplica'
  
 UPDATE proconbase SET SexoConsumidor = '' WHERE SexoConsumidor IS NULL;
-UPDATE proconbase SET CEPConsumidor = '' WHERE CEPConsumidor like '%Nao se aplica%'
+UPDATE proconbase SET CEPConsumidor = '' WHERE CEPConsumidor like '%Nao se aplica%';
 
 -----------------------
 --- P R O C O N D W ---
@@ -315,6 +326,9 @@ ALTER TABLE procondw ADD FOREIGN KEY(cod_regiao) REFERENCES regiao(cod_regiao);
 ALTER TABLE procondw ADD FOREIGN KEY(cnpj) REFERENCES empresa(cnpj);
 ALTER TABLE procondw ADD FOREIGN KEY(uf) REFERENCES uf(uf);
 
+-- Total de registros na tabela procondw
+SELECT count(*) AS "PROCONDW: TOTAL DE REGISTROS FINAL" FROM procondw;
+
 -----------------------------------------------
 ------------------ T E M P O ------------------
 -- criado depois da tabela procondw populada --
@@ -344,7 +358,11 @@ INSERT INTO tempo (ano_abertura, mes_abertura, trim_abertura, dt_abertura, qtde_
 		DATE(dt_abertura)
 	ORDER BY 4;
 
-*****************/
+-- Total de registros na tabela tempo
+SELECT count(*) AS "TEMPO: TOTAL DE REGISTROS FINAL" FROM tempo;
+
+/*******
+
 -- relacionando procondw com tempo
 ALTER TABLE procondw ADD id_tempo INT;
 
@@ -354,3 +372,5 @@ SET id_tempo = (
 	FROM tempo t
 	WHERE t.dt_abertura = dw.dt_abertura
 );
+
+********/
