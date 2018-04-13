@@ -1,0 +1,2161 @@
+
+SQL*Loader: Release 11.2.0.2.0 - Production on Qua Abr 4 23:21:16 2018
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Arquivo de Controle:   proconBigData.ctl
+Conjunto de Caracteres WE8ISO8859P1 especificada para todas as entradas.
+
+Há 5 arquivos de dados:
+Arquivo de Dados:      /Extensao_BigData/reclamacoes-fundamentadas-sindec-2012.csv
+  Arquivo de Incorreções:     reclamacoes-fundamentadas-sindec-2012.bad
+  Arquivo de Descarte:  nenhum(a) foi especificado(a)
+ 
+ (Permite todos os descartes)
+Arquivo de Dados:      /Extensao_BigData/reclamacoes-fundamentadas-sindec-2013.csv
+  Arquivo de Incorreções:     reclamacoes-fundamentadas-sindec-2013.bad
+  Arquivo de Descarte:  nenhum(a) foi especificado(a)
+ 
+ (Permite todos os descartes)
+Arquivo de Dados:      /Extensao_BigData/reclamacoes-fundamentadas-sindec-2014.csv
+  Arquivo de Incorreções:     reclamacoes-fundamentadas-sindec-2014.bad
+  Arquivo de Descarte:  nenhum(a) foi especificado(a)
+ 
+ (Permite todos os descartes)
+Arquivo de Dados:      /Extensao_BigData/reclamacoes-fundamentadas-sindec-2015.csv
+  Arquivo de Incorreções:     reclamacoes-fundamentadas-sindec-2015.bad
+  Arquivo de Descarte:  nenhum(a) foi especificado(a)
+ 
+ (Permite todos os descartes)
+Arquivo de Dados:      /Extensao_BigData/reclamacoes-fundamentadas-sindec-2016.csv
+  Arquivo de Incorreções:     /Extensao_BigData/procon.bad
+  Arquivo de Descarte: /Extensao_BigData/procon.dsc 
+ (Permite todos os descartes)
+
+Número a ser carregado: ALL
+Número a ser ignorado: 1
+Erros permitidos: 9999999
+Array de ligação:     5 linhas, máximo de 256000 bytes
+Continuação:    nenhum(a) foi especificado(a)
+Caminho usado:      Convencional
+
+Tabela PROCONBASE, carregada a partir de cada registro lógico.
+Opção de inserção em vigor para esta tabela: TRUNCATE
+Opção TRAILING NULLCOLS em efeito
+
+   Nome da Coluna                  Posição   Tam  Term Incl Tipo de Dados
+------------------------------ ---------- ----- ---- ---- ---------------------
+ANOCALENDARIO                       FIRST     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TO_NUMBER(TRIM(:AnoCalendario))"
+DATAARQUIVAMENTO                     NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TO_TIMESTAMP(TRIM(:DataArquivamento),'YYYY-MM-DD HH24:MI:SS.FF9')"
+DATAABERTURA                         NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TO_TIMESTAMP(TRIM(:DataAbertura),'YYYY-MM-DD HH24:MI:SS.FF9')"
+CODIGOREGIAO                         NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TO_NUMBER(TRIM(:CodigoRegiao))"
+REGIAO                               NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:Regiao)"
+UF                                   NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:UF)"
+STRRAZAOSOCIAL                       NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:strRazaoSocial)"
+STRNOMEFANTASIA                      NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:strNomeFantasia)"
+TIPO                                 NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "LTRIM(:Tipo)"
+NUMEROCNPJ                           NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:NumeroCNPJ)"
+RADICALCNPJ                          NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:RadicalCNPJ)"
+RAZAOSOCIALRFB                       NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:RazaoSocialRFB)"
+NOMEFANTASIARFB                      NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:NomeFantasiaRFB)"
+CNAEPRINCIPAL                        NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:CNAEPrincipal)"
+DESCCNAEPRINCIPAL                    NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:DescCNAEPrincipal)"
+ATENDIDA                             NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:Atendida)"
+CODIGOASSUNTO                        NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:CodigoAssunto)"
+DESCRICAOASSUNTO                     NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:DescricaoAssunto)"
+CODIGOPROBLEMA                       NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:CodigoProblema)"
+DESCRICAOPROBLEMA                    NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:DescricaoProblema)"
+SEXOCONSUMIDOR                       NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:SexoConsumidor)"
+FAIXAETARIACONSUMIDOR                NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:FaixaEtariaConsumidor)"
+CEPCONSUMIDOR                        NEXT     *   ,  O(") CHARACTER            
+    String SQL para coluna : "TRIM(:CEPConsumidor)"
+
+
+Arquivo de Dados /Extensao_BigData/reclamacoes-fundamentadas-sindec-2012.csv -
+
+Registro 15184: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 21283: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 37639: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 39906: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 39908: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 44775: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 53586: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 55951: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 55999: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 56975: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 62165: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 69193: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 69430: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 69475: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 69535: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 70574: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 70719: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 71134: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 71705: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 72146: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 73179: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 74736: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 74813: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 75255: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 75283: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 75745: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 75779: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 75780: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 79644: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 81146: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 82187: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 82624: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 85532: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 86876: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 88974: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 98127: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 102667: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 116186: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 117136: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 118899: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 142017: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 143392: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 154847: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 155652: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 158813: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 158833: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 160010: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 160134: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 160403: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 160837: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 160949: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 161200: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 161955: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 163690: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 163874: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 163881: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 165989: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 167415: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 172046: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 172049: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 172375: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 173554: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 173748: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 174206: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 174306: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 174358: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 175081: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 175235: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 176685: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 176981: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 177441: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 177859: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 177876: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 178400: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 179529: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 180105: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 180795: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+
+Arquivo de Dados /Extensao_BigData/reclamacoes-fundamentadas-sindec-2013.csv -
+
+Registro 211077: Rejeitado - Erro na tabela PROCONBASE, coluna ANOCALENDARIO.
+ORA-01722: número inválido
+
+Registro 211148: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 213418: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 214025: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 227904: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 227957: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 229793: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 230423: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 231426: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 233625: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 235721: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 238541: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 240161: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 240442: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 242832: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 245086: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 247228: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 248010: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 251631: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 252358: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 253581: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 255126: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 257207: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 257208: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 257859: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 259049: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 260394: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 260405: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 260726: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 262390: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 265482: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 265506: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 266609: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 268401: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 270267: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 270798: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 271704: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 277047: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 279562: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 280719: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 282194: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 282210: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 282257: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 283736: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 286940: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 290860: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 296757: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 297618: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 297915: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 301260: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 302661: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 303082: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 306442: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 307159: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 310082: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 311196: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 317300: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 319810: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 325327: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 325662: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 330488: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 331168: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 331829: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 332428: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 333063: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 342275: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 344036: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 344066: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 344882: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 350818: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 357000: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 359030: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 360564: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 363128: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 365774: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 366651: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 368050: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 368794: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 380111: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 381712: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 384963: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 392776: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 394996: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 395020: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 398885: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 400383: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 406901: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 408377: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 410409: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 414973: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 418692: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 419503: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 420772: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 423698: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 424634: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 433183: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 436226: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 437650: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 437778: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 445103: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 445993: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 446805: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 447064: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 461011: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 463798: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 465535: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 469324: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 469367: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 470740: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 473356: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 473642: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 474311: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 476946: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+
+Arquivo de Dados /Extensao_BigData/reclamacoes-fundamentadas-sindec-2014.csv -
+
+Registro 479174: Rejeitado - Erro na tabela PROCONBASE, coluna ANOCALENDARIO.
+ORA-01722: número inválido
+
+Registro 489815: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 489868: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 506160: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 517633: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 528343: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 533846: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 551484: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 558444: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 560861: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 561187: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 561457: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562567: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562590: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562597: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562626: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 562650: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562659: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562660: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 562724: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 562755: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562758: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562772: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562808: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 562813: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 563533: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 563554: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 563571: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 563658: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 563704: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 563825: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 563853: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 563968: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564029: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564037: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564099: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564473: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564882: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564913: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564967: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564972: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 564980: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 564995: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565005: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565015: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565071: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565077: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565145: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565204: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 565475: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 566256: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 566342: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 566956: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 568256: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 569048: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 571182: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 571545: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 571997: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573687: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573692: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573704: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573765: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573770: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573800: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573803: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573867: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573918: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 573924: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 574062: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 574111: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 574211: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 574944: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 574999: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 575138: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575145: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 575155: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575156: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575161: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575213: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575216: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575274: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575286: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575302: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575326: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575336: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575337: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575344: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575358: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 575370: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575402: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575449: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 575700: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 576287: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576381: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576382: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576485: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576543: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576555: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576560: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 576574: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 577043: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 577348: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 577543: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 582784: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 583176: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 584711: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 586831: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 587448: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 589592: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 592898: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 594032: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 595578: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 605689: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 612635: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 617170: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 617171: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 617489: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 619061: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 623155: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 623916: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 628757: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 639223: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 639224: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 639366: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 646530: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 646531: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 650620: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 650941: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 651285: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 651286: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 661974: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 661975: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 663872: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 669001: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 669494: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 679749: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 680522: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 699410: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 704078: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 704079: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 704080: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 706435: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 706761: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 709538: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 711496: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 714273: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 714274: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 714275: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 724666: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 725891: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 725892: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 726851: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 729859: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 729860: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 729861: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 733690: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 735702: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 735835: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 736877: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 736908: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 736982: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 737349: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 737350: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 738251: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 738254: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 738304: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 738720: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 738863: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 739531: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 739556: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 739598: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 739617: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 740909: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 741097: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 741098: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 743803: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 743828: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 744014: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 744068: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745477: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745507: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745508: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745639: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745733: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 745760: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 745823: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 745957: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 746235: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 746239: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 746543: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+
+Arquivo de Dados /Extensao_BigData/reclamacoes-fundamentadas-sindec-2015.csv -
+
+Registro 746939: Rejeitado - Erro na tabela PROCONBASE, coluna ANOCALENDARIO.
+ORA-01722: número inválido
+
+Registro 750005: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 750135: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 751281: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 756045: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 757868: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 759273: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 759344: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 759504: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 764472: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 767855: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 769711: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 771665: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 772799: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 773351: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 777022: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 777436: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 779905: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 781217: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 783109: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 787343: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 787696: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 791343: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 791875: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 794383: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 796194: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 799977: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 801033: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 802432: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 802617: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 803622: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 804967: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 811340: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 812165: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 813176: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 813802: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 816164: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 818465: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 818604: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 818605: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 819566: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 823726: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 823756: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 825411: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 826489: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 827381: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 827608: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 832405: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 840004: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 841642: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 842367: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 843455: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 844540: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 845668: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 850488: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 851150: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 851909: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 851910: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 854564: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 861345: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 861602: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 861679: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 861762: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 862139: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 870306: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 871713: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 873126: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 873409: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 874086: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 874175: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 875796: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 876947: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 878969: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 879510: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 884078: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 884777: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 885004: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 885258: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 885443: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 885473: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 885574: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 887483: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 894627: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 900475: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 902248: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 904983: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 906403: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 908322: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 908385: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 914765: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 915202: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 915541: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 915646: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 916680: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 918097: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 922241: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 923843: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 924799: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 926108: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 926517: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 930301: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 934351: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 934509: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 936620: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 937232: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 939407: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 939420: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 940475: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 942719: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 948450: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 950689: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 951706: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 952282: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 953923: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 964797: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 965208: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 965803: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 968299: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 972998: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 977421: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 977427: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 981577: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 988442: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 991916: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 992575: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 992939: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 993487: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 994250: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 995489: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 997192: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1000792: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+
+Arquivo de Dados /Extensao_BigData/reclamacoes-fundamentadas-sindec-2016.csv -
+
+Registro 1002590: Rejeitado - Erro na tabela PROCONBASE, coluna ANOCALENDARIO.
+ORA-01722: número inválido
+
+Registro 1003233: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1003234: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1003524: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1003525: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1003702: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1004090: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1010372: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1012769: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1012770: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1012771: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1014806: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1019332: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1019346: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1019359: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1022612: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1022613: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1022632: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1024108: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1027026: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1027812: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1028138: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1029035: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1033102: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1034386: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1034687: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1037348: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1039143: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1046121: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1046202: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1048536: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1053223: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1053425: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1055516: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1055830: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1057584: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1058271: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1058969: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1062127: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1068121: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1068123: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1069624: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1074234: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1074277: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1075807: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1075808: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1075917: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1077338: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1077464: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1077502: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1078194: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1078284: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1078962: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1079725: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1079862: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1080449: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1080468: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1080503: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1086814: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1088969: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1092172: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1093609: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1097708: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1097709: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1097725: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1098083: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1101029: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1102672: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1105101: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1105102: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1105107: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1109879: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1109907: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1115247: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1115344: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1115742: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1116937: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1116938: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1116967: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1117646: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1118080: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1118081: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1118407: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1122014: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1124647: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1124648: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1126501: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1126655: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1128188: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1129299: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1129440: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1130774: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1131513: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1131514: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1131831: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1132006: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1132266: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1132293: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1133080: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1133306: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1134907: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1135257: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1135283: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1136023: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1136024: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1136025: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1136030: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1136764: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1138262: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1139030: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1139253: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1146423: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1147707: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1147708: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1147935: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1148547: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1149556: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1150233: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1150608: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1150943: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1152543: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1155176: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1155719: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1155726: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1156510: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1156617: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1157319: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1159101: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1160066: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1160067: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1163096: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1165300: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1166387: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1177990: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1180581: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1180582: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1180995: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1182291: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1182293: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1183208: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1184076: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1184154: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1184920: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1187398: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1190563: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1190624: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1190691: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1191372: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1191435: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1192173: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 159, máximo: 150)
+
+Registro 1196190: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1196520: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1196563: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1197190: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1198674: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1199320: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1201224: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+Registro 1201835: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1203635: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1203639: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1204432: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1204433: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1204434: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1204679: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1205116: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 160, máximo: 150)
+
+Registro 1205166: Rejeitado - Erro na tabela PROCONBASE, coluna DESCRICAOASSUNTO.
+ORA-12899: valor muito grande para a coluna "BDEXTENSAO"."PROCONBASE"."DESCRICAOASSUNTO" (real: 152, máximo: 150)
+
+
+Tabela PROCONBASE:
+  1205399 Linhas carregado com êxito.
+  677 Linhas não carregado devido a erros de dados.
+  0 Linhas não carregado porque todas as cláusulas WHEN falharam.
+  0 Linhas não carregado porque todos os campos eram nulos.
+
+
+Espaço alocado para o array de ligação:                  29670 bytes(5 linhas)
+Bytes do buffer de leitura: 1048576
+
+Total de registros lógicos ignorados:          1
+Total de registros lógicos lidos:       1206076
+Total de registros lógicos rejeitados:       677
+Total de registros lógicos descartados:        0
+
+A execução começou em Qua Abr 04 23:21:16 2018
+A execução foi finalizada em Qua Abr 04 23:23:07 2018
+
+O tempo decorrido foi:     00:01:50.73
+O tempo de CPU foi:         00:00:19.50
