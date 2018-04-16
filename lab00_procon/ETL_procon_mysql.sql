@@ -2,11 +2,12 @@
 ----- ETL base procon - mysql -----
 -- --------------------------------
 /*
-                               <- Regiao
+     Consumidor ->             <- Regiao
 CNAE -> Empresa -> Reclamação  <- Assunto
-                               <- Problema
-							   <- Tempo
+          Tempo ->             <- Problema
 */
+
+/*************
 
 -- extraindo dados da tabela base para criar tabelas referenciadas com código
 
@@ -51,12 +52,12 @@ INSERT INTO cnae (cod_cnae, descr_cnae)
 DELETE FROM cnae WHERE cod_cnae IS NULL ;
 
 -- verifica duplicatas
-SELECT cod_cnae, count(*)
-FROM cnae
-GROUP BY cod_cnae
-HAVING count(*) > 1;
+--SELECT cod_cnae, count(*)
+--FROM cnae
+--GROUP BY cod_cnae
+--HAVING count(*) > 1;
 
-SELECT * FROM cnae WHERE cod_cnae = 4751201;
+--SELECT * FROM cnae WHERE cod_cnae = 4751201;
 -- limpeza feita a partir da duplicata encontrada
 DELETE FROM cnae WHERE descr_cnae IS NULL;
 
@@ -103,27 +104,27 @@ DELETE FROM empresa WHERE razao_social IS NULL;
 DELETE FROM empresa WHERE cnpj IS NULL;
 
 -- Total de registros
-SELECT count(*) AS "TOTAL DE REGISTROS" FROM empresa;
+--SELECT count(*) AS "TOTAL DE REGISTROS" FROM empresa;
 
 -- Total de cnpj unicos
-SELECT count(*) AS "TOTAL CNPJ UNICOS"
-FROM (
-	SELECT DISTINCT cnpj FROM empresa
-) AS t;
+--SELECT count(*) AS "TOTAL CNPJ UNICOS"
+--FROM (
+--	SELECT DISTINCT cnpj FROM empresa
+--) AS t;
 
 -- Total de cnpj que aparecem mais de uma vez
-SELECT count(*) AS "CNPJ QUE REPETEM"
-FROM (
-	SELECT count(cnpj)
-	FROM empresa GROUP BY cnpj HAVING count(cnpj) > 1
-) AS t;
+--SELECT count(*) AS "CNPJ QUE REPETEM"
+--FROM (
+--	SELECT count(cnpj)
+--	FROM empresa GROUP BY cnpj HAVING count(cnpj) > 1
+--) AS t;
 
 -- Total de registros repetidos (que devem ser apagados)
-SELECT sum(n) AS "TOTAL DE REPETIÇÕES"
-FROM (
-	SELECT count(cnpj) - 1 AS n
-	FROM empresa GROUP BY cnpj HAVING count(cnpj) > 1
-) AS t;
+--SELECT sum(n) AS "TOTAL DE REPETIÇÕES"
+--FROM (
+--	SELECT count(cnpj) - 1 AS n
+--	FROM empresa GROUP BY cnpj HAVING count(cnpj) > 1
+--) AS t;
 
 -- adicionando uma coluna temporária (sequencial) auxiliar para remoção dos cnpj duplicados (obs.: o mysql exige que a coluna de identidade seja chave primária)
 ALTER TABLE empresa ADD t_seq INT AUTO_INCREMENT PRIMARY KEY;
@@ -272,21 +273,16 @@ UPDATE uf set nome_uf = UPPER(nome_uf);
 -- Total de registros na tabela uf
 SELECT count(*) AS "UF: TOTAL DE REGISTROS FINAL" FROM uf;
 
-------------------------------
---- limpando a tabela base ---
-------------------------------
---SELECT MAX(LENGTH(TRIM(UF))) FROM proconbase; -- 2
---SELECT MAX(LENGTH(TRIM(Atendida))) FROM proconbase; -- 1
---SELECT MAX(LENGTH(TRIM(SexoConsumidor))) FROM proconbase; -- 1
---SELECT DISTINCT TRIM(SexoConsumidor) FROM proconbase; -- tem NULL
---SELECT MAX(LENGTH(TRIM(CEPconsumidor))) FROM proconbase; -- 14 - tem 'Nao se aplica'
- 
-UPDATE proconbase SET SexoConsumidor = '' WHERE SexoConsumidor IS NULL;
-UPDATE proconbase SET CEPConsumidor = '' WHERE CEPConsumidor like '%Nao se aplica%';
-
 -----------------------
 --- P R O C O N D W ---
 -----------------------
+
+--SELECT MAX(LENGTH(TRIM(Atendida))) FROM proconbase; -- 1
+--SELECT MAX(LENGTH(TRIM(SexoConsumidor))) FROM proconbase; -- 1
+--SELECT DISTINCT TRIM(SexoConsumidor) FROM proconbase; -- tem NULL
+--SELECT MAX(LENGTH(TRIM(CEPconsumidor))) FROM proconbase; -- 13 - tem 'Nao se aplica'
+--SELECT MAX(LENGTH(TRIM(FaixaEtariaConsumidor))) FROM proconbase; -- 18 - tem 'Nao se aplica'
+ 
 DROP TABLE IF EXISTS procondw;
 CREATE TABLE procondw (
 	ano_calendario INT,
@@ -300,7 +296,7 @@ CREATE TABLE procondw (
 	cod_problema INT, 
 	sexo_consumidor CHAR(1),
 	faixa_etaria_consumidor CHAR(20),
-	cep_consumidor CHAR(9)
+	cep_consumidor CHAR(20)
 );
 
 INSERT INTO procondw (ano_calendario, dt_arquivamento, dt_abertura, cod_regiao, uf, cnpj, atendida, cod_assunto, cod_problema, sexo_consumidor, faixa_etaria_consumidor, cep_consumidor)
@@ -329,48 +325,97 @@ ALTER TABLE procondw ADD FOREIGN KEY(uf) REFERENCES uf(uf);
 -- Total de registros na tabela procondw
 SELECT count(*) AS "PROCONDW: TOTAL DE REGISTROS FINAL" FROM procondw;
 
------------------------------------------------
------------------- T E M P O ------------------
--- criado depois da tabela procondw populada --
------------------------------------------------
+---------------------------
+--- C O N S U M I D O R ---
+---------------------------
+
+--SELECT MAX(LENGTH(TRIM(faixa_etaria_consumidor))) FROM procondw; -- 18 - tem 'Nao se aplica'
+--SELECT MAX(LENGTH(TRIM(cep_consumidor))) FROM procondw; -- 13 - tem 'Nao se aplica'
+--SELECT MAX(LENGTH(TRIM(sexo_consumidor))) FROM procondw; -- 1
+--SELECT DISTINCT TRIM(sexo_consumidor) FROM procondw; -- tem NULL
+
+-- excluindo faixa etária 'Nao se aplica';
+--SELECT COUNT(*) FROM procondw WHERE faixa_etaria_consumidor LIKE '%aplica%';
+DELETE FROM procondw WHERE faixa_etaria_consumidor LIKE '%aplica%';
+
+UPDATE procondw SET sexo_consumidor = '' WHERE sexo_consumidor IS NULL;
+
+DROP TABLE IF EXISTS consumidor;
+CREATE TABLE consumidor (
+	id_consumidor INT NOT NULL AUTO_INCREMENT,
+	faixa_etaria CHAR(18),
+	cep_consumidor INT,
+	sexo_consumidor CHAR(1),
+	count_consumidor SMALLINT,
+	PRIMARY KEY (id_consumidor)
+);
+
+INSERT INTO consumidor (faixa_etaria, cep_consumidor, sexo_consumidor, count_consumidor)
+	SELECT
+		TRIM(faixa_etaria_consumidor),
+		regexp_replace(cep_consumidor, '[^0-9]+', ''),
+		TRIM(sexo_consumidor),
+		count(*)
+	FROM procondw
+	GROUP BY
+		TRIM(faixa_etaria_consumidor),
+		regexp_replace(cep_consumidor, '[^0-9]+', ''),
+		TRIM(sexo_consumidor)
+	ORDER BY 1,3,2;
+
+-- Total de registros na tabela consumidor
+SELECT count(*) AS "CONSUMIDOR: TOTAL DE REGISTROS FINAL" FROM consumidor;
+
+-----------------
+--- T E M P O ---
+-----------------
 DROP TABLE IF EXISTS tempo;
 CREATE TABLE tempo (
 	id_tempo INT AUTO_INCREMENT PRIMARY KEY,
+	ano_calendario SMALLINT,
 	ano_abertura SMALLINT,
 	mes_abertura SMALLINT,
 	trim_abertura SMALLINT,
 	dt_abertura DATE,
+	dt_arquivamento DATE,
 	qtde_data SMALLINT
 );
 
-INSERT INTO tempo (ano_abertura, mes_abertura, trim_abertura, dt_abertura, qtde_data)
+INSERT INTO tempo (ano_calendario, ano_abertura, mes_abertura, trim_abertura, dt_abertura, dt_arquivamento, qtde_data)
 	SELECT
+		ano_calendario,
 		YEAR(dt_abertura),
 		MONTH(dt_abertura),
 		QUARTER(dt_abertura),
 		DATE(dt_abertura),
-		COUNT(*)
+		DATE(dt_arquivamento),
+		count(*)
 	FROM procondw
 	GROUP BY
+		ano_calendario,
 		YEAR(dt_abertura),
 		MONTH(dt_abertura),
 		QUARTER(dt_abertura),
-		DATE(dt_abertura)
+		DATE(dt_abertura),
+		DATE(dt_arquivamento)
 	ORDER BY 4;
 
 -- Total de registros na tabela tempo
 SELECT count(*) AS "TEMPO: TOTAL DE REGISTROS FINAL" FROM tempo;
 
-/*******
+***********/
 
 -- relacionando procondw com tempo
 ALTER TABLE procondw ADD id_tempo INT;
 
+-- Método mais mnemônico, mas muito lento
 UPDATE procondw dw
 SET id_tempo = (
 	SELECT id_tempo
 	FROM tempo t
-	WHERE t.dt_abertura = dw.dt_abertura
+	WHERE
+		t.ano_calendario = dw.ano_calendario AND
+		t.dt_abertura = dw.dt_abertura AND
+		t.dt_arquivamento = dw.dt_arquivamento
 );
 
-********/
